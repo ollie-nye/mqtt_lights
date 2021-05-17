@@ -1,0 +1,21 @@
+<%= form_for @zone do |f| %>
+  <div class="grid grid-rows-5 w-full h-screen">
+    <div class='p-8 w-full h-full'>
+      <%= link_to zones_path, class: 'flex items-center text-center block w-full h-full bg-blue-500 text-white rounded-xl border-solid border-2 border-blue-900' do %>
+        <h1 class="text-4xl text-center w-full"><%= @zone.name %>(<%= @zone.first %> - <%= @zone.last %>)</h1>
+      <% end %>
+    </div>
+    <div>
+      <%= f.range_field :brightness, min: 0, max: 255, id: 'slider', class: 'w-full h-full', onchange: 'this.form.submit()' %>
+    </div>
+    <div class="bg-red-500">
+      <%= f.range_field :red, min: 0, max: 255, class: 'w-full h-full', onchange: 'this.form.submit()' %>
+    </div>
+    <div class="bg-green-500">
+      <%= f.range_field :green, min: 0, max: 255, class: 'w-full h-full', onchange: 'this.form.submit()' %>
+    </div>
+    <div class="bg-blue-500">
+      <%= f.range_field :blue, min: 0, max: 255, class: 'w-full h-full', onchange: 'this.form.submit()' %>
+    </div>
+  </div>
+<% end %>

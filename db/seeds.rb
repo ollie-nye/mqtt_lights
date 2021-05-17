@@ -1,0 +1,6 @@
+Zone.create(name: "Inside wall", first: 338, last: 525, brightness: 255, red: 0, green: 0, blue: 0)
+Zone.create(name: "TV", first: 0, last: 91, brightness: 255, red: 0, green: 0, blue: 0)
+Zone.create(name: "Outside wall", first: 92, last: 279, brightness: 255, red: 0, green: 0, blue: 0)
+Zone.create(name: "Table", first: 280, last: 337, brightness: 255, red: 0, green: 0, blue: 0)
+Zone.create(name: "Living room", first: 450, last: 149, brightness: 255, red: 0, green: 0, blue: 0)
+Zone.create(name: "Dining room", first: 150, last: 449, brightness: 255, red: 0, green: 0, blue: 0)

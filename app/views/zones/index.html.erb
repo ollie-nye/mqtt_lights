@@ -1,0 +1,13 @@
+<div class="grid grid-cols-2 w-full h-screen">
+  <%= render @zones %>
+  <div class='p-8 w-full h-full'>
+    <%= link_to manuals_path, class: 'flex items-center block w-full h-full bg-blue-500 text-white rounded-xl border-solid border-2 border-blue-900' do %>
+      <p class="text-7xl text-center w-full">Manual input</p>
+    <% end %>
+  </div>
+  <div class='p-8 w-full h-full'>
+    <%= link_to random_manuals_path, method: :post, class: 'flex items-center block w-full h-full bg-blue-500 text-white rounded-xl border-solid border-2 border-blue-900' do %>
+      <p class="text-7xl text-center w-full">RaNdOmIsE mE</p>
+    <% end %>
+  </div>
+</div>

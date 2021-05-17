@@ -1,0 +1,6 @@
+.git
+coverage
+log
+tmp
+node_modules
+db/*.sqlite3
