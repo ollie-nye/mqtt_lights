@@ -18,8 +18,6 @@ RUN bundle install
 
 COPY . /myapp/
 
-RUN chmod 700 /tmp
-
 EXPOSE 3000
 
-CMD /bin/sh -c "rm -f /myapp/tmp/pids/server.pid && bundle install && ./bin/rails server -p 3000 -b '0.0.0.0'"
+CMD /bin/sh -c "bundle install && ./bin/rails server -p 3000 -b '0.0.0.0'"
