@@ -16,9 +16,11 @@ RUN bundle install
 
 COPY . /myapp/
 
-RUN chown -R app:app /myapp/
+RUN chown -R app:root /myapp/
 
 USER app
+
+RUN usermod -d /myapp app
 
 EXPOSE 3000
 
