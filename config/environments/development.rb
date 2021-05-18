@@ -75,4 +75,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.hosts << "dev.ollie.lan.local"
+  config.hosts << "mqtt-lights-lights.apps.ocp.okd.local"
 end
