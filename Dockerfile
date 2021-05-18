@@ -6,7 +6,7 @@ RUN apt update && apt install -y \
   curl \
   build-essential \
   libpq-dev && \
-  curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
+  curl -sL https://deb.nodesource.com/setup_15.x | bash - && \
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
   apt-get update && apt-get install -y nodejs yarn
@@ -19,7 +19,7 @@ RUN gem install bundler -v 2.1.4
 
 WORKDIR /myapp
 
-COPY package.json yarn.lock /myapp/
+COPY package.json /myapp/
 
 RUN yarn install
 
@@ -31,7 +31,7 @@ COPY . /myapp/
 
 RUN mkdir tmp
 
-RUN chmod -R 777 tmp 
+RUN chmod -R 777 tmp
 
 RUN chown -R app:root /myapp/
 
