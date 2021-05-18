@@ -18,9 +18,9 @@ COPY . /myapp/
 
 RUN chown -R app:root /myapp/
 
-USER app
-
 RUN usermod -d /myapp app
+
+USER app
 
 EXPOSE 3000
 
