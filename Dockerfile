@@ -10,6 +10,10 @@ RUN gem install bundler -v 2.1.4
 
 WORKDIR /myapp
 
+COPY package.json yarn.lock /myapp/
+
+RUN yarn install
+
 COPY Gemfile* /myapp/
 
 RUN bundle install
