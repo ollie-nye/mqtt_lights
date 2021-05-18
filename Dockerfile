@@ -4,8 +4,6 @@ RUN apt update && apt install -y nodejs postgresql-client
 
 RUN groupadd -g 1000 app && useradd -r -u 1000 -g app app
 
-USER app
-
 RUN gem update --system
 
 RUN gem install bundler -v 2.1.4
@@ -17,6 +15,10 @@ COPY Gemfile* /myapp/
 RUN bundle install
 
 COPY . /myapp/
+
+RUN chown -R app:app /myapp/
+
+USER app
 
 EXPOSE 3000
 
