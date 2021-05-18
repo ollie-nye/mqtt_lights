@@ -18,7 +18,7 @@ COPY . /myapp/
 
 RUN mkdir tmp
 
-RUN chmod -r 777 tmp 
+RUN chmod -R 777 tmp 
 
 RUN chown -R app:root /myapp/
 
