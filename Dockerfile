@@ -16,6 +16,10 @@ RUN bundle install
 
 COPY . /myapp/
 
+RUN mkdir tmp
+
+RUN chmod -r 777 tmp 
+
 RUN chown -R app:root /myapp/
 
 RUN usermod -d /myapp app
